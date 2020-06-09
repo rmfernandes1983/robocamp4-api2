@@ -27,6 +27,7 @@ pipeline {
       stage('UAT') {
          steps {
             echo 'Aprovação dos testes de aceitação' 
+            input (message: 'Você aprova essa versão?', ok: 'Sim')
          } 
       }
       stage('Production') {
